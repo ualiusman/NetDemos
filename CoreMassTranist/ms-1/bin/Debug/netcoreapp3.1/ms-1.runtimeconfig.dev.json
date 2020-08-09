@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\MotherCare\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\MotherCare\\.nuget\\packages"
+    ]
+  }
+}

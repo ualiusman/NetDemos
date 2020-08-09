@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "rpczXVkzx6Gyi7+vsP2d0hLgu8k0uTgfcFGAyKrxpy4fsiiJUjlSTM81A/REbzEKmaORWZf14/IAkmGS/7UbWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MotherCare\\source\\repos\\Feat\\Feat\\Feat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MotherCare\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\MotherCare\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\MotherCare\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
