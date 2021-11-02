@@ -1,0 +1,32 @@
+﻿version: '3.4'
+
+services:
+  mate:
+    image: tood
+    container_name: toot
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+;http://+
+      - ASPNETCORE_HTTPS_PORT=8001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=uali
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings:DefaultConnection=Server=host.docker.internal;Database=Toot;User Id=sa;Password=sa;Trusted_Connection=false;
+    ports:
+      - "8001:443"
+      - "8000:80"
+    volumes:
+      - ~\.aspnet\https:/https/
+  matea:
+    image: mate
+    container_name: mate
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+;http://+
+      - ASPNETCORE_HTTPS_PORT=8002
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=uali
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    ports:
+      - "8002:443"
+      - "8100:80"
+    volumes:
+      - ~\.aspnet\https:/https/
