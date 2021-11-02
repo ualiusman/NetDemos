@@ -12,3 +12,6 @@ IdentitySever 4 Demo
 
 ## 4. PMadiate
 .net 5 Demo with MediateR and Record Type
+
+## 5. Docker
+docker and docker compose files and cmds
