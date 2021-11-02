@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMediate", "PMediate\PMediate.csproj", "{EFDE1FDE-BAB8-48BE-AFB6-B49008AEE5D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B813CD1-6DF3-41B8-9852-777EA98222FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A1F4F5BA-D63D-4556-969F-001A61739936}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFDE1FDE-BAB8-48BE-AFB6-B49008AEE5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDE1FDE-BAB8-48BE-AFB6-B49008AEE5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDE1FDE-BAB8-48BE-AFB6-B49008AEE5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDE1FDE-BAB8-48BE-AFB6-B49008AEE5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFDE1FDE-BAB8-48BE-AFB6-B49008AEE5D1} = {3B813CD1-6DF3-41B8-9852-777EA98222FF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33E8C940-3F4E-46C7-BFF6-8CE19A862B41}
+	EndGlobalSection
+EndGlobal

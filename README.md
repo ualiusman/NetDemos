@@ -9,3 +9,6 @@ Feature Folder Demo in API and CQRS implementation with MediatoR
 
 ## 3. IdentityServer4 
 IdentitySever 4 Demo
+
+## 4. PMadiate
+Madiate Pattren using MadiateR
