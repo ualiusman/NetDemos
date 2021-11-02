@@ -11,4 +11,4 @@ Feature Folder Demo in API and CQRS implementation with MediatoR
 IdentitySever 4 Demo
 
 ## 4. PMadiate
-Madiate Pattren using MadiateR
+.net 5 Demo with MediateR and Record Type
