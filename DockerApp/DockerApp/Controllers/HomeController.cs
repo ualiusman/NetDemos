@@ -6,21 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DockerApp.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace DockerApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IRepository repository;
+        private string message;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IRepository repository, IConfiguration config)
         {
             _logger = logger;
+            this.repository = repository;
+            message = config["MESSAGE"] ?? "Essential Docker";
         }
 
         public IActionResult Index()
         {
-            return View();
+            ViewBag.Message = message;
+            return View(repository.Products);
         }
 
         public IActionResult Privacy()

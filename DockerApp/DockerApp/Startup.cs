@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using DockerApp.Models;
 namespace DockerApp
 {
     public class Startup
@@ -23,6 +23,8 @@ namespace DockerApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IRepository, DummyRepository>();
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllersWithViews();
         }
 
