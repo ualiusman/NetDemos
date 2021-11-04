@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using DockerApp.Models;
+using Microsoft.EntityFrameworkCore;
 namespace DockerApp
 {
     public class Startup
@@ -23,7 +24,16 @@ namespace DockerApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var host = Configuration["DBHOST"] ?? "localhost";
+            var port = Configuration["DBPORT"] ?? "3306";
+            var password = Configuration["DBPASSWORD"] ?? "mysecret";
+            var connectionString = $"server={host};userid=root;pwd={password};port={port};database=products";
+             services.AddDbContext<ProductDbContext>(options =>
+           options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+           );
+
             services.AddTransient<IRepository, DummyRepository>();
+            services.AddTransient<IRepository, ProductRepository>();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllersWithViews();
         }
@@ -54,6 +64,9 @@ namespace DockerApp
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+            SeedData.EnsurePopulated(app);
         }
     }
 }
