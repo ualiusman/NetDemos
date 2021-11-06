@@ -26,14 +26,14 @@ namespace DockerApp
         {
             var host = Configuration["DBHOST"] ?? "localhost";
             var port = Configuration["DBPORT"] ?? "3306";
-            var password = Configuration["DBPASSWORD"] ?? "mysecret";
-        //     var connectionString = $"server={host};userid=root;pwd={password};port={port};database=products";
-        //      services.AddDbContext<ProductDbContext>(options =>
-        //    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
-        //    );
+            var password = Configuration["DBPASSWORD"] ?? "uali";
+            var connectionString = $"server={host};userid=root;pwd={password};port={port};database=products";
+             services.AddDbContext<ProductDbContext>(options =>
+           options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+           );
 
             services.AddTransient<IRepository, DummyRepository>();
-            // services.AddTransient<IRepository, ProductRepository>();
+            services.AddTransient<IRepository, ProductRepository>();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllersWithViews();
         }
@@ -66,7 +66,7 @@ namespace DockerApp
             });
 
 
-            // SeedData.EnsurePopulated(app);
+             SeedData.EnsurePopulated(app);
         }
     }
 }

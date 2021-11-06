@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 namespace DockerApp.Models{
 
     public static class SeedData{
         public static void EnsurePopulated(IApplicationBuilder builder){
-
+            var scope = builder.ApplicationServices.CreateScope();
+var context = scope.ServiceProvider.GetService<ProductDbContext>();
+            EnsurePopulated(context);
         }
 
 
