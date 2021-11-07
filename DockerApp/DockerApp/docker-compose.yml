@@ -1,0 +1,21 @@
+version: "3"
+
+volumes:
+  productdata:
+
+networks:
+  backend:
+  frontend:
+
+
+services:
+
+  mysql:
+    image:"mysql"
+    volumes:
+      - productdata:/var/lib/mysql
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD:uali
+      - bind-address:0.0.0.0

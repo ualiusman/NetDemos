@@ -20,7 +20,7 @@ namespace DockerApp.Controllers
         {
             _logger = logger;
             this.repository = repository;
-            message = config["MESSAGE"] ?? "Essential Docker";
+            message = $"Essential Docker ({config["HOSTNAME"]})";
         }
 
         public IActionResult Index()
