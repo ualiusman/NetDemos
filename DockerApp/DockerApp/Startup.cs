@@ -66,7 +66,7 @@ namespace DockerApp
             });
 
 
-             SeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
         }
     }
 }

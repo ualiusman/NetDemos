@@ -1,4 +1,4 @@
-version: "3"
+version: '3.4'
 
 volumes:
   productdata:
@@ -11,11 +11,44 @@ networks:
 services:
 
   mysql:
-    image:"mysql"
+    image: mysql
     volumes:
       - productdata:/var/lib/mysql
     networks:
       - backend
     environment:
-      - MYSQL_ROOT_PASSWORD:uali
-      - bind-address:0.0.0.0
+      - MYSQL_ROOT_PASSWORD=uali
+      - bind-address=0.0.0.0
+  
+  dbinit:
+    build:
+      context: .
+      dockerfile: dockerfile
+    networks:
+      - backend
+    environment:
+      - DBINIT=true
+      - DBHOST:mysql
+    depends_on:
+      - mysql
+  
+  mvc:
+    build:
+      context: .
+      dockerfile: dockerfile
+    networks:
+      - backend
+      - frontend
+    environment:
+      - DBHOST:mysql
+    depends_on:
+      - mysql
+  
+  loadbalancer:
+    build:
+      context: ../LoadBalancer
+      dockerfile: dockerfile
+    ports:
+      - 3000:80
+    networks:
+      - frontend
