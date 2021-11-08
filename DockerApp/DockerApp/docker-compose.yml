@@ -23,7 +23,7 @@ services:
   dbinit:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     networks:
       - backend
     environment:
@@ -35,7 +35,7 @@ services:
   mvc:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     networks:
       - backend
       - frontend
@@ -47,7 +47,7 @@ services:
   loadbalancer:
     build:
       context: ../LoadBalancer
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - 3000:80
     networks:
