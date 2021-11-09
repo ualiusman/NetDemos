@@ -13,7 +13,7 @@ namespace DockerApp.Models{
             var envs = Environment.GetEnvironmentVariables();
             var host = envs["DBHOST"] ?? "localhost";
             var port = envs["DBPORT"] ?? "3306";
-            var password = envs["DBPASSWORD"] ?? "mysecret";
+            var password = envs["DBPASSWORD"] ?? "uali";
             var connectionString = $"server={host};userid=root;pwd={password};" + $"port={port};database=products";
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
