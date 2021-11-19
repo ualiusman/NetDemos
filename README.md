@@ -15,3 +15,5 @@ IdentitySever 4 Demo
 
 ## 5. Docker
 docker and docker compose files and cmds
+## 6. GraphQL
+GraphQL simple example with console app
