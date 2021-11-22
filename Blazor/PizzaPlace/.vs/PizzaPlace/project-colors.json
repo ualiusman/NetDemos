@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7d237bb2-90ec-4483-9d46-6b2d26028d85": {
+      "ProjectGuid": "7d237bb2-90ec-4483-9d46-6b2d26028d85",
+      "DisplayName": "PizzaPlace.Client",
+      "ColorIndex": 0
+    },
+    "73a5e0eb-94d2-4e40-a9af-d18cf9d45e48": {
+      "ProjectGuid": "73a5e0eb-94d2-4e40-a9af-d18cf9d45e48",
+      "DisplayName": "PizzaPlace.Server",
+      "ColorIndex": 1
+    },
+    "f597b368-078c-4c0e-a56a-59911a5437e9": {
+      "ProjectGuid": "f597b368-078c-4c0e-a56a-59911a5437e9",
+      "DisplayName": "PizzaPlace.Server",
+      "ColorIndex": 2
+    },
+    "38adbc4d-be7b-4022-b677-d209d42e201c": {
+      "ProjectGuid": "38adbc4d-be7b-4022-b677-d209d42e201c",
+      "DisplayName": "PizzaPlace.Shared",
+      "ColorIndex": 3
+    },
+    "0783a262-987b-4d1e-930a-f5f468ff309a": {
+      "ProjectGuid": "0783a262-987b-4d1e-930a-f5f468ff309a",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
