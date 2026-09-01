@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "DemoFunction": {
+    "CalculatorFunction": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7146",
+      "commandLineArgs": "--port 7284",
       "launchBrowser": false
     }
   }
