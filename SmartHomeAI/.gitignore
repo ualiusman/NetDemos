@@ -1,0 +1,71 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Publish output
+publish/
+
+# Azure
+*.azurePubxml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# DotCover
+*.dotCover
+
+# Backup files
+*.bak
+*.backup
+
+# Environment files
+.env
+.env.*
+
+# Secrets (important for your AI project)
+appsettings.Development.json
+secrets.json
+
+# Node (if you add frontend later)
+node_modules/
+dist/
+
+# Docker
+docker-compose.override.yml

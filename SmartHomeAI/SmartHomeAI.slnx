@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SmartHomeAI.AI/SmartHomeAI.AI.csproj" />
+  <Project Path="SmartHomeAI.API/SmartHomeAI.API.csproj" />
+  <Project Path="SmartHomeAI.Infrastructure/SmartHomeAI.Infrastructure.csproj" />
+</Solution>
